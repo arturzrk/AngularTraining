@@ -1,0 +1,15 @@
+<div class="panel panel-default zippy" (click)="onClick()">
+  <div class="zippy-heading panel-heading">
+    <b>{{title}}</b>
+    <p 
+      class="glyphicon" 
+      [ngClass]="{
+        'glyphicon-chevron-up' : !isZipped,
+        'glyphicon-chevron-down zippy-heading' : isZipped
+      }">
+    </p>
+  </div>
+  <div class="zippy-body panel-body" [hidden]="isZipped">
+      <ng-content></ng-content>
+  </div>
+</div>
